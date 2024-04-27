@@ -20,3 +20,21 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>,
 );
+
+//Toggle na otevření hamburger menu
+const hamburgerBtn = document.querySelector('.nav-btn');
+const rollout = document.querySelector('.rollout-nav');
+
+const clickOnHamburger = () => {
+  rollout.classList.toggle('nav-closed');
+};
+
+hamburgerBtn.addEventListener('click', clickOnHamburger);
+
+//Schování rolloutu v hamburgeru po kliku na položku z menu
+
+const clickOnRollout = () => {
+  rollout.classList.add('nav-closed');
+};
+
+rollout.addEventListener('click', clickOnRollout);
